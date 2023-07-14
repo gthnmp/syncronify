@@ -1,48 +1,42 @@
-# Supabase Starter
+# Syncronify
 
-This starter configures Supabase Auth to use cookies, making the user's session available throughout the entire Next.js app - Client Components, Server Components, Route Handlers, Server Actions and Middleware.
+Syncronify is a free, open-source app that offers messaging, voice chat, note-taking, and team management features. The primary focus of Syncronify is to prioritize user privacy and provide a secure communication platform.
 
-## Deploy your own
+## Technologies Used
 
-The Vercel deployment will guide you through creating a Supabase account and project. After installation of the Supabase integration, all relevant environment variables will be set up so that the project is usable immediately after deployment 🚀
+Syncronify is built using the following technologies:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-supabase&project-name=nextjs-with-supabase&repository-name=nextjs-with-supabase&integration-ids=oac_jUduyjQgOyzev1fjrW83NYOv)
+* Supabase: Supabase is a powerful open-source alternative to Firebase. It provides a set of tools and services for building scalable and secure applications.
 
-## How to use
+* Next.js: Next.js is a React framework for building server-side rendered and static websites. It offers features like automatic code splitting, server-side rendering, and easy deployment.
 
-1. Create a [new Supabase project](https://database.new)
-1. Run `npx create-next-app -e with-supabase` to create a Next.js app using the Supabase Starter template
-1. Use `cd` to change into the app's directory
-1. Run `npm install` to install dependencies
-1. Rename `.env.local.example` to `.env.local` and update the values for `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` from [your Supabase project's API settings](https://app.supabase.com/project/_/settings/api)
+* Vercel: Vercel is a cloud platform that specializes in hosting static websites and serverless functions. It simplifies the deployment process and provides scalability and reliability.
+
+## Features
+To get started with Syncronify, follow these steps:
+
+1. Clone git repo: `git clone syncronify`
+1. Change directory: `cd syncronify`
+1. Install dependencies `npm install`
+1. Configure Supabase: Set up a Supabase project and configure the necessary environment variables.
+1. In the `.env.local`, update the values for `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` from [your Supabase project's API settings](https://app.supabase.com/project/_/settings/api)
 1. Run `npm run dev` to start the local development server
 
 > Check out [the docs for Local Development](https://supabase.com/docs/guides/getting-started/local-development) to also run Supabase locally.
 
-### Create a Supabase client
+## Contributing
 
-Check out the [`/app/_examples`](./app/_examples/) folder for an example of creating a Supabase client in:
+Contributions to Syncronify are welcome! If you'd like to contribute, please follow these guidelines:
 
-- [Client Components](./app/_examples/client-component/page.tsx)
-- [Server Components](./app/_examples/server-component/page.tsx)
-- [Route Handlers](./app/_examples/route-handler/route.ts)
-- [Server Actions](./app/_examples/server-action/page.tsx)
+1. Fork the repository and create your branch: `git checkout -b my-feature`
+1. Make your changes and commit them: `git commit -am 'Add new feature'`
+1. Push to your branch: `git push origin my-feature`
+1. Submit a pull request detailing your changes.
 
-### Create `todo` table and seed with data (optional)
+## License
 
-Navigate to [your project's SQL Editor](https://app.supabase.com/project/_/sql), click `New query`, paste the contents of the [init.sql](./supabase/migrations/20230618024722_init.sql) file and click `RUN`.
-
-This will create a basic `todos` table, enable Row Level Security (RLS), and write RLS policies enabling `select` and `insert` actions for `authenticated` users.
-
-To seed your `todos` table with some dummy data, run the contents of the [seed.sql](./supabase/seed.sql) file.
+Syncronify is released under the MIT License. Feel free to use, modify, and distribute the codebase according to the terms of the license.
 
 ## Feedback and issues
 
-Please file feedback and issues over on the [Supabase GitHub org](https://github.com/supabase/supabase/issues/new/choose).
-
-## More Supabase examples
-
-- [Next.js Subscription Payments Starter](https://github.com/vercel/nextjs-subscription-payments)
-- [Cookie-based Auth and the Next.js 13 App Router (free course)](https://youtube.com/playlist?list=PL5S4mPUpp4OtMhpnp93EFSo42iQ40XjbF)
-- [Supabase Auth and the Next.js App Router](https://github.com/supabase/supabase/tree/master/examples/auth/nextjs)
-- [Next.js Auth Helpers Docs](https://supabase.com/docs/guides/auth/auth-helpers/nextjs)
+For any inquiries, feedback, or issues, please contact the me at gathan.mahesa@gmail.com

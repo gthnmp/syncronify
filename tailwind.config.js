@@ -11,6 +11,11 @@ module.exports = {
           'background-hover': 'hsl(var(--btn-background-hover))',
         },
       },
+      fontFamily: {
+        sans : ['var(--font-open-sans)'],
+        serif : ['var(--font-noto-serif)'],
+        cursive: ['var(--font-poiret-one)']
+      },
     },
   },
   plugins: [],
