@@ -1,10 +1,10 @@
 import './globals.css'
 import {notoSerif, openSans,poiretOne} from '@/components/Fonts'
 
-export const metadata = {
-  title: 'Syncronify',
-  description: 'A private place to connect and collaborate',
-}
+// export const metadata = {
+//   title: 'Syncronify',
+//   description: 'A private place to connect and collaborate',
+// }
 
 export default function RootLayout({
   children,
@@ -17,9 +17,9 @@ export default function RootLayout({
         <link rel="icon" href="/logo.svg" type="image/svg" sizes="<generated>"/>
       </head>
       <body className={`${notoSerif.variable} ${openSans.variable} ${poiretOne.variable}`}>
-        <main className="min-h-screen bg-background flex flex-col items-center font-sans">
+        <div className="min-h-screen bg-background flex flex-col items-center font-sans">
           {children}
-        </main>
+        </div>
       </body>
     </html>
   )
