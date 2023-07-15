@@ -23,7 +23,7 @@ export default async function Dashboard() {
         <div className='w-screen h-full grid grid-cols-[5rem_auto_20rem] grid-rows-1 gap-x-1'>
           <Sidebar user={user}/>
           <Main user={user}/>
-          <Activity/>
+          <Activity user={user}/>
         </div>
       ) : (
         <div className="flex flex-col items-center w-screen h-screen text-white justify-center">
