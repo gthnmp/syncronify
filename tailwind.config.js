@@ -16,6 +16,10 @@ module.exports = {
         serif : ['var(--font-noto-serif)'],
         cursive: ['var(--font-poiret-one)']
       },
+      borderWidth:{
+        1 : "1px",
+        "1/2" : "0.5px",
+      }
     },
   },
   plugins: [],
