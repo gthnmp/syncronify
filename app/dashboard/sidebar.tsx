@@ -35,11 +35,11 @@ function Menu({profPictSrc} : {profPictSrc : string | StaticImageData }) {
         />
       </div>
       {sidebarMenus.map((menu, index) => (
-        <li key={index} className="flex items-center">
+        <button key={index} className="flex items-center opacity-50 hover:opacity-100 transition-all duration-300 focus:opacity-100">
           {React.createElement(menu.icon, {
-            className: 'scale-[1.5] opacity-50 hover:opacity-100 transition-all duration-300',
+            className: 'scale-[1.5]',
           })}
-        </li>
+        </button>
       ))}
     </ul>
   );
