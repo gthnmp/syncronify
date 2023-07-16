@@ -19,7 +19,8 @@ export default async function Dashboard() {
   const { data: { user } } = await supabase.auth.getUser()
   
   return (
-    <>{user ? (
+    <>
+    {user ? (
         <div className='w-screen h-full grid grid-cols-[5rem_auto_20rem] grid-rows-1 gap-x-1'>
           <Sidebar user={user}/>
           <Main user={user}/>
@@ -31,6 +32,7 @@ export default async function Dashboard() {
           <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center my-12">
             You need to Login or Create An Account{' '}
             to access this page
+            
           </p>
           <div className='flex gap-5 items-center justify-between'>
             <Link href ="/login" className="bg-green-500 py-3 px-6 rounded-lg font-mono text-sm text-background flex items-center gap-2">

@@ -14,13 +14,14 @@ export const metadata : Metadata = {
   description: 'A private place to connect and collaborate',
 }
 
-
 export default async function Index() {
   const supabase = createServerComponentClient({ cookies })
 
   const {
     data: { user },
   } = await supabase.auth.getUser()
+
+  const displayName = user?.user_metadata?.full_name || user?.email;
 
   return (
     <div className="w-full fixed top-0 flex flex-col items-center">
@@ -30,7 +31,7 @@ export default async function Index() {
           <div>
             {user ? (
               <div className="flex items-center gap-4">
-                Hey, {user.email}!
+                Hey, {displayName}!
                 <LogoutButton />
               </div>
             ) : (
@@ -66,7 +67,7 @@ export default async function Index() {
 
         <div className="flex flex-col justify-center text-center text-xs font-thin">
           <Link href="https://github.com/gthnmp/syncronify" target="_blank" className="">
-            An Open Source Software powered by{' '}
+            An open source project powered by{' '}
               <strong>Supabase, NextJS, and Vercel</strong>
           </Link>
         </div>

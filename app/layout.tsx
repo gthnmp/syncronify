@@ -1,10 +1,10 @@
 import './globals.css'
 import {notoSerif, openSans,poiretOne} from '@/components/Fonts'
 
-// export const metadata = {
-//   title: 'Syncronify',
-//   description: 'A private place to connect and collaborate',
-// }
+export const metadata = {
+  title: 'Syncronify',
+  description: 'A private place to connect and collaborate',
+}
 
 export default function RootLayout({
   children,

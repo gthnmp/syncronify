@@ -25,7 +25,7 @@ function Menu({profPictSrc} : {profPictSrc : string | StaticImageData }) {
   return (
     <ul className="w-full h-full flex flex-col justify-between items-center">
       <Image src={Logo} alt="Syncronify Logo" width={100} height={100} className="scale-75" />
-      <div className="w-full h-auto aspect-square overflow-hidden rounded-full bg-green-500 scale-75">
+      <div className="w-full h-auto aspect-square overflow-hidden rounded-full bg-neutral-700 scale-75">
         <Image
           src={profPictSrc}
           alt="User's Profile Picture"
@@ -48,13 +48,19 @@ function Menu({profPictSrc} : {profPictSrc : string | StaticImageData }) {
 export default function Sidebar({ user }: { user: User | null }) {
   const [userProfilePictureSource, setProfilePictureSource] = useState<string | StaticImageData>(DefaultProfPic);
 
-  useEffect(() => {
-    // Fetch user profile picture here and update the state
-    // Example: setProfilePictureSource(user.profilePicture);
-  }, [user]);
+  // useEffect(() => {
+    
+  //   // Discord provider 
+  //   if(user?.user_metadata?.avatar_url){
+  //     console.log("yes")
+  //     console.log(user)
+  //     setProfilePictureSource(user.user_metadata.avatar_url)
+  //   }
+
+  // }, [user]);
 
   return (
-    <nav className="h-screen w-20 flex flex-col items-center border-r-1 text-white border-neutral-500 z-50 left-0">
+    <nav className="h-screen w-20 flex flex-col items-center border-r-1 text-white border-neutral-700 z-50 left-0">
       <div className="w-full h-2/3 p-5">
         <Menu profPictSrc={userProfilePictureSource}/>
       </div>
