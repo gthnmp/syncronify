@@ -4,8 +4,9 @@ import Task from '../(sections)/task'
 import Done from '../(sections)/done'
 import Ovewview from '../(sections)/overview'
 import {useState, useEffect} from 'react'
+import { User } from '@supabase/supabase-js'
 
-const Name = () => {
+const GroupName = () => {
   const title = "Sleepy Crews"
   const tags = ["Website", "Design", "Database"];
   const formattedTags = tags.map((tag) => tag.charAt(0).toUpperCase() + tag.slice(1));
@@ -19,7 +20,7 @@ const Name = () => {
   )
 }
 
-const Buttons = ({ setSection }: { setSection: any }) => {
+const ChangeSectionButtons = ({ setSection, user }: { setSection: any, user: User | null }) => {
   const [activeSection, setActiveSection] = useState("Discussion");
 
   function handleClick(element: any, label : string) {
@@ -28,7 +29,7 @@ const Buttons = ({ setSection }: { setSection: any }) => {
   }
 
   const menuItems = [
-    { label: "Discussion", element: <Discussion />, border: true },
+    { label: "Discussion", element: <Discussion user={user} />, border: true },
     { label: "Task", element: <Task />, border: true },
     { label: "Done List", element: <Done />, border: true },
     { label: "Overview", element: <Ovewview />, border: true }
@@ -36,7 +37,7 @@ const Buttons = ({ setSection }: { setSection: any }) => {
 
   return (
     <div className="relative row-start-2 col-span-2">
-      <ul className="absolute bottom-0 flex gap-5">
+      <ul className="absolute bottom-0 flex gap-5 font-light">
         {menuItems.map((item, index) => (
           <li key={index} className="">
             <button
@@ -54,11 +55,11 @@ const Buttons = ({ setSection }: { setSection: any }) => {
   );
 };
 
-const GroupInfo = ({setSection} : {setSection : any}) => {
+const GroupInfo = ({setSection, user} : {setSection : any, user : User | null}) => {
   return(
     <header className="w-full h-52 grid grid-rows-2 grid-cols-2 border-b-1 px-10 pt-10 gap-y-10 border-neutral-700">
-      <Name/>
-      <Buttons setSection={setSection}/>
+      <GroupName />
+      <ChangeSectionButtons setSection={setSection} user={user}/>
     </header>
   )
 }
