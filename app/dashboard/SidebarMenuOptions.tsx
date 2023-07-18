@@ -10,6 +10,7 @@ import { LuClipboardSignature } from 'react-icons/lu';
 import { MdGroups } from 'react-icons/md';
 import { BiBell } from 'react-icons/bi';
 
+
 const sidebarMenus = [
   { name: 'Dashboard', icon: HiOutlineSquares2X2 },
   { name: 'Notification', icon: BiBell },
@@ -20,7 +21,7 @@ const sidebarMenus = [
 
 export default function SidebarMenuOptions() {
   return (
-  <div className="w-full h-2/3 p-5">
+  <div className="w-full h-2/3  p-5">
   <ul className="w-full h-full flex flex-col justify-between items-center">
       <Image src={Logo} alt="Syncronify Logo" width={100} height={100} className="scale-75" />
       <div className="w-full h-auto aspect-square overflow-hidden rounded-full bg-neutral-700 scale-75">

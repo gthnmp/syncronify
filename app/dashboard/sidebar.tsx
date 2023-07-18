@@ -1,13 +1,13 @@
 "use client"
 import React,{ useEffect, useState } from 'react';
 import { User } from '@supabase/supabase-js';
-import SidebarMenuOptions from '@/components/SidebarMenuOptions'
-import SidebarSettingOptions from '@/components/SidebarSettingOption'
+import SidebarMenuOptions from './SidebarMenuOptions'
+import SidebarSettingOptions from './SidebarSettingOption'
 
 function Navbar ({setSidebarSize} : {setSidebarSize : Function}){
   
   return(
-    <nav className="h-screen w-20  flex flex-col items-center border-r-1 text-white border-neutral-700 b z-50 left-0">
+    <nav className="h-full w-20 flex flex-col items-center border-r-1 text-white border-neutral-700 b z-50 left-0">
       <SidebarMenuOptions />
       <SidebarSettingOptions/>  
     </nav>
@@ -16,7 +16,7 @@ function Navbar ({setSidebarSize} : {setSidebarSize : Function}){
 
 function ExpandedNavbarContainer({isSidebarExpanded} : {isSidebarExpanded : boolean}){
   return(
-    <header className={`h-screen w-0 bg-green-700 text-white ${isSidebarExpanded ? 'grid place-items-center' : 'hidden'}`}>
+    <header className={`h-screen w-full text-white ${isSidebarExpanded ? 'grid place-items-center' : 'hidden'}`}>
       fobaro
     </header>
   )
