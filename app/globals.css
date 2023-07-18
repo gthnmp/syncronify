@@ -44,3 +44,12 @@
     transform: translateY(0);
   }
 }
+
+
+.ease-in-back {
+  transition-timing-function:cubic-bezier(.72,.11,0,.99)
+}
+
+
+/* transition-timing-function: cubic-bezier(1,-0.01,.63,.72); */
+/* transition-timing-function: cubic-bezier(1,-0.03,.59,.79) */
