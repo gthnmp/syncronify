@@ -1,9 +1,9 @@
 "use client"
 import { User } from "@supabase/supabase-js";
 import React, {useState} from 'react'
-import Discussion from "./(sections)/discussion";
-import GroupInfo from "./(component)/GroupInfo";
-import GroupSection from "./(component)/GroupSection";
+import Discussion from "./(component)/MainComponent/discussion";
+import GroupInfo from "./(component)/MainComponent/GroupInfo";
+import GroupSection from "./(component)/MainComponent/GroupSection";
 
 interface MainProps {
   user: User | null;

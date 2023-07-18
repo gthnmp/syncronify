@@ -1,8 +1,8 @@
 "use client"
-import Discussion from '../(sections)/discussion'
-import Task from '../(sections)/task'
-import Done from '../(sections)/done'
-import Ovewview from '../(sections)/overview'
+import Discussion from './discussion'
+import Task from './task'
+import Done from './done'
+import Ovewview from './overview'
 import {useState, useEffect} from 'react'
 import { User } from '@supabase/supabase-js'
 
