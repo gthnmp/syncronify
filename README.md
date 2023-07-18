@@ -40,3 +40,10 @@ Syncronify is released under the MIT License. Feel free to use, modify, and dist
 ## Feedback and issues
 
 For any inquiries, feedback, or issues, please contact the me at gathan.mahesa@gmail.com
+
+## Todos 18 July
+
+1. Update the sidebar UI
+1. Create the sidebar expand functionality
+1. Fixing the tailwind ??? (Because sometimes the tailwind breaks and I dont know why)
+

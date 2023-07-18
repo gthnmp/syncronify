@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { AiOutlineSend } from 'react-icons/ai';
 import { User, createClient } from '@supabase/supabase-js';
+import Image from 'next/image'
+import profPict from '@/public/assets/gatan.jpg'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
@@ -66,7 +68,9 @@ const ChatDisplayBox : React.FC<ChatDisplayBoxProps> = ({ user, message, message
     <ul className="flex flex-col w-full h-full gap-4 font-light overflow-scroll">
       {messagesList.map((msg) => (
         <li key={msg.id} id={msg.id} ref ={ref} className="flex p-2 gap-4 items-center">
-          <div className="w-10 h-10 aspect-square rounded-full bg-gray-700"></div>
+          <div className="w-10 h-10 aspect-square rounded-full overflow-hidden bg-gray-700">
+            <Image src={profPict} alt={`${msg.sender}'s Profile Picture`} width={100} height={100} className='w-full h-full object-cover'/>
+          </div>
           <div>
             <div className="flex gap-2">
               <h2>{msg.sender}</h2>
