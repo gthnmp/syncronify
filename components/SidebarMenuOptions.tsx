@@ -1,5 +1,6 @@
 import React from "react";
 import Image, { StaticImageData } from 'next/image';
+import profilePicture from '@/public/assets/gatan.jpg'
 import Logo from '@/public/logo.svg';
 import {
   HiOutlineSquares2X2,
@@ -17,14 +18,14 @@ const sidebarMenus = [
   { name: 'Groups', icon: MdGroups },
 ];
 
-export default function SidebarMenuOptions({profPictSrc} : {profPictSrc : string | StaticImageData }) {
+export default function SidebarMenuOptions() {
   return (
   <div className="w-full h-2/3 p-5">
   <ul className="w-full h-full flex flex-col justify-between items-center">
       <Image src={Logo} alt="Syncronify Logo" width={100} height={100} className="scale-75" />
       <div className="w-full h-auto aspect-square overflow-hidden rounded-full bg-neutral-700 scale-75">
         <Image
-          src={profPictSrc}
+          src={profilePicture}
           alt="User's Profile Picture"
           width={100}
           height={100}

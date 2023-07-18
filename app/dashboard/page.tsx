@@ -21,7 +21,7 @@ export default async function Dashboard() {
   return (
     <>
     {user ? (
-        <div className='w-screen h-full grid grid-cols-[5rem_auto_20rem] grid-rows-1 gap-x-1'>
+        <div className='w-screen h-full grid grid-cols-[auto_1fr_20rem] grid-rows-1 gap-x-1'>
           <Sidebar user={user}/>
           <Main user={user}/>
           <Activity user={user}/>
