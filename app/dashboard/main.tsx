@@ -4,6 +4,9 @@ import React, {useState} from 'react'
 import Discussion from "./(sections)/discussion";
 import GroupInfo from "./(component)/GroupInfo";
 import GroupSection from "./(component)/GroupSection";
+import GroupChatDisplayBox from "./(component)/GroupChatDisplayBox";
+import GroupChatHeader from "./(component)/GroupChatHeader";
+import GroupChatSendMessage from "./(component)/GroupChatSendMessage";
 
 interface MainProps {
   user: User | null;
@@ -12,9 +15,13 @@ interface MainProps {
 export default function Main({ user }: MainProps) {
   const [currentSection, setSection] = useState(<Discussion user={user}/>)
   return (
-    <article className="w-full h-screen text-white grid grid-cols-1 auto-rows-[auto_1fr] rounded-lg bg-neutral-900 font-sans overflow-hidden">
-      <GroupInfo setSection={setSection} user={user}/>
-      <GroupSection element={currentSection} user={user}/>
+    <article className="w-full h-screen overflow-scroll grid grid-cols-1 grid-rows-[auto_1fr_auto] rounded-lg bg-neutral-800  text-white font-sans">
+      <GroupChatHeader/>
+      <GroupChatDisplayBox/>
+      <GroupChatSendMessage/>
     </article>
   );
 }
+
+{/* <GroupInfo setSection={setSection} user={user}/> */}
+{/* <GroupSection element={currentSection} user={user}/> */}

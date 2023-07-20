@@ -8,7 +8,7 @@ import { User } from '@supabase/supabase-js'
 
 const GroupName = () => {
   const title = "Sleepy Crews"
-  const tags = ["Website", "Design", "Database"];
+  const tags = ["Random", "Game", "Meme "];
   const formattedTags = tags.map((tag) => tag.charAt(0).toUpperCase() + tag.slice(1));
   const renderedTags = formattedTags.join(" / ");
 
@@ -30,9 +30,9 @@ const ChangeSectionButtons = ({ setSection, user }: { setSection: any, user: Use
 
   const menuItems = [
     { label: "Discussion", element: <Discussion user={user} />, border: true },
-    { label: "Task", element: <Task />, border: true },
-    { label: "Done List", element: <Done />, border: true },
-    { label: "Overview", element: <Ovewview />, border: true }
+    { label: "Stories", element: <Task />, border: true },
+    { label: "Media", element: <Done />, border: true },
+    { label: "Call Log", element: <Ovewview />, border: true }
   ];
 
   return (
@@ -53,11 +53,11 @@ const ChangeSectionButtons = ({ setSection, user }: { setSection: any, user: Use
       </ul>
     </div>
   );
-};
+  };
 
 const GroupInfo = ({setSection, user} : {setSection : any, user : User | null}) => {
   return(
-    <header className="w-full h-52 grid grid-rows-2 grid-cols-2 border-b-1 px-10 pt-10 gap-y-10 border-neutral-700">
+    <header className="w-full h-52 bg-green-600 grid grid-rows-2 grid-cols-2 border-b-1 px-10 gap-y-10 border-neutral-700">
       <GroupName />
       <ChangeSectionButtons setSection={setSection} user={user}/>
     </header>
