@@ -6,12 +6,7 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-type Message = {
-  id: string;
-  sender: string;
-  content: string;
-  created_at: string;
-}
+
 
 interface ChatDisplayBoxProps {
   user? : User | null;
@@ -32,7 +27,7 @@ const ChatDisplayBox : React.FC<ChatDisplayBoxProps> = ({ user, message, message
     }
     return timestamp;
   };
-
+  
   const fetchMessages = async () => {
     try {
       const { data, error } = await supabase.from('messages').select('*');
